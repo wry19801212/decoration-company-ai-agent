@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>装修公司 AI 运营工作台</title>
+    <link rel="stylesheet" href="style.css?v=2" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">装修公司智能体</p>
+          <h1>AI 运营工作台</h1>
+        </div>
+        <div class="status">
+          <span>账号搭建</span>
+          <span>内容拍摄</span>
+          <span>年框方案</span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <form class="panel input-panel" id="briefForm">
+          <div class="panel-head">
+            <h2>公司资料</h2>
+            <div class="head-actions">
+              <button type="button" id="fillDemo">填入示例</button>
+              <button type="button" id="clearBrief">清空</button>
+            </div>
+          </div>
+
+          <label>
+            公司名称
+            <input name="company" placeholder="如：某某装饰" />
+          </label>
+
+          <label>
+            所在城市
+            <input name="city" placeholder="如：杭州 / 苏州 / 成都" />
+          </label>
+
+          <label>
+            主营业务
+            <input name="business" placeholder="如：整装、旧房改造、大宅设计" />
+          </label>
+
+          <label>
+            目标客户
+            <input name="customer" placeholder="如：交房业主、改善型家庭、别墅业主" />
+          </label>
+
+          <label>
+            客单价
+            <input name="price" placeholder="如：15-35万 / 50万以上" />
+          </label>
+
+          <label>
+            核心优势
+            <textarea name="advantage" rows="4" placeholder="如：自有工人、透明报价、环保材料、设计能力强"></textarea>
+          </label>
+
+          <label>
+            近期目标
+            <textarea name="goal" rows="4" placeholder="如：做本地账号、获取线索、包装样板间征集活动、做年度代运营提案"></textarea>
+          </label>
+        </form>
+
+        <section class="panel output-panel">
+          <div class="panel-head">
+            <h2>生成模块</h2>
+            <div class="head-actions">
+              <button type="button" id="copyPrompt">复制结果</button>
+              <button type="button" id="downloadPrompt">导出MD</button>
+            </div>
+          </div>
+
+          <div class="mode-switch" role="group" aria-label="生成模式">
+            <button type="button" class="active" data-mode="prompt">AI提示词</button>
+            <button type="button" data-mode="framework">执行框架</button>
+          </div>
+
+          <div class="module-grid" id="moduleGrid">
+            <button data-module="account" class="active">账号搭建</button>
+            <button data-module="content">内容选题</button>
+            <button data-module="shooting">拍摄脚本</button>
+            <button data-module="seeding">种草笔记</button>
+            <button data-module="campaign">活动策划</button>
+            <button data-module="ads">广告投放</button>
+            <button data-module="live">直播运营</button>
+            <button data-module="proposal">年框标书</button>
+            <button data-module="private">私域跟进</button>
+            <button data-module="review">数据复盘</button>
+            <button data-module="competitor">竞品分析</button>
+            <button data-module="bid">标书目录</button>
+          </div>
+
+          <textarea id="promptOutput" spellcheck="false"></textarea>
+        </section>
+      </section>
+
+      <section class="quick-board">
+        <article>
+          <h3>交付节奏</h3>
+          <p>月度策略、周度选题、单场拍摄、活动节点、投放复盘，形成长期运营闭环。</p>
+        </article>
+        <article>
+          <h3>核心指标</h3>
+          <p>内容发布量、线索数、私信数、直播预约数、到店率、成交辅助金额。</p>
+        </article>
+        <article>
+          <h3>年框打法</h3>
+          <p>用“年度增长服务”包装，不按零散文案报价，而按策略、内容、拍摄、活动、投放、直播整体报价。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js?v=2"></script>
+  </body>
+</html>
